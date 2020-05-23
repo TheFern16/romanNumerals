@@ -5,6 +5,12 @@ form {
   align-items: center;
 }
 
+input {
+  margin: 1em;
+  font-size: 1em;
+  font-weight: 200;
+}
+
 .romanContainer {
   background-color: #282c34;
   min-height: 50vh;
