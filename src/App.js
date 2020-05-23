@@ -9,15 +9,19 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      romanNumeralConversionValue: 'default'
+      romanNumeralConversionValue: 0
     };
 
     this.handleRomanChange = this.handleRomanChange.bind(this);
   };
 
   handleRomanChange(textValue) {
-    // romanNumeralConverter(textValue);
-    validateRomanNumerals(textValue);
+    var validate = validateRomanNumerals(textValue);
+    if (validate) {
+      this.setState({
+        romanNumeralConversionValue: romanNumeralConverter(textValue)
+      })
+    }
   };
 
   render() {

@@ -57,7 +57,8 @@ export function validateRomanNumerals(string) {
   var result = '';
   for (var i = 0; i < string.length; i++) {
     if (romanNumerals[string[i]]) {
-      console.log('validate', string[i])
+      result += string[i];
     }
   }
+  return result.length === string.length ? true : false;
 };
