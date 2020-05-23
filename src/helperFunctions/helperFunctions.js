@@ -13,6 +13,20 @@ export function romanNumeralConverter(string) {
         result += 1;
         string = string.slice(1);
       }
+    } else if (string[0] === 'V') {
+      result += 5;
+      string = string.slice(1);
+    } else if (string[0] === 'X') {
+      if (stirng[0 + 1] === 'L') {
+        result += 40;
+        string = string.slice(2);
+      } else if (string[0 + 1] === 'C') {
+        result += 90;
+        string = string.slice(2);
+      } else {
+        result += 10;
+        string = string.slice(1);
+      }
     }
   }
   return result;
