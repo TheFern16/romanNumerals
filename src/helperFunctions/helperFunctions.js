@@ -6,7 +6,7 @@ export function romanNumeralConverter(string) {
       if (string[0 + 1] === 'X') {
         result += 9;
         string = string.slice(2);
-      } else if (s[0 + 1] === 'V') {
+      } else if (string[0 + 1] === 'V') {
         result += 4;
         string = string.slice(2);
       } else {
