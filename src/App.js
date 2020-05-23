@@ -6,6 +6,10 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      romanNumeralConversionValue: 'default'
+    };
   };
 
   render() {
@@ -25,7 +29,9 @@ class App extends React.Component {
             Learn about Roman Numerals
           </a>
         </header>
-        <Roman />
+        <Roman
+          romanNumeralConversionValue={this.state.romanNumeralConversionValue}
+        />
       </div>
     );
   }
