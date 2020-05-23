@@ -53,5 +53,11 @@ export function romanNumeralConverter(string) {
 };
 
 export function validateRomanNumerals(string) {
-  console.log('validate', string)
+  const romanNumerals = { I: 'I', V: 'V', X: 'X', L: 'L', C: 'C', D: 'D', M: 'M' };
+  var result = '';
+  for (var i = 0; i < string.length; i++) {
+    if (romanNumerals[string[i]]) {
+      console.log('validate', string[i])
+    }
+  }
 };
