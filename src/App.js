@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './clockface_roman01.jpg';
+import logo from './assets/clockface_roman01.jpg';
+import Roman from './components/Roman/Roman.js';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           Learn about Roman Numerals
         </a>
       </header>
+      <Roman />
     </div>
   );
 }
