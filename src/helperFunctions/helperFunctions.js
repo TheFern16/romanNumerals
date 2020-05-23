@@ -17,7 +17,7 @@ export function romanNumeralConverter(string) {
       result += 5;
       string = string.slice(1);
     } else if (string[0] === 'X') {
-      if (stirng[0 + 1] === 'L') {
+      if (string[0 + 1] === 'L') {
         result += 40;
         string = string.slice(2);
       } else if (string[0 + 1] === 'C') {
@@ -50,4 +50,8 @@ export function romanNumeralConverter(string) {
     }
   }
   return result;
+};
+
+export function validateRomanNumerals(string) {
+  console.log('validate', string)
 };

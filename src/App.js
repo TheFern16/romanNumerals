@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './assets/clockface_roman01.jpg';
 import Roman from './components/Roman/Roman.js';
-import { romanNumeralConverter } from './helperFunctions/helperFunctions.js';
+import { romanNumeralConverter, validateRomanNumerals } from './helperFunctions/helperFunctions.js';
 import './App.css';
 
 class App extends React.Component {
@@ -16,7 +16,8 @@ class App extends React.Component {
   };
 
   handleRomanChange(textValue) {
-    romanNumeralConverter(textValue);
+    // romanNumeralConverter(textValue);
+    validateRomanNumerals(textValue);
   };
 
   render() {
