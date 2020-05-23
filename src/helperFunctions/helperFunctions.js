@@ -27,6 +27,20 @@ export function romanNumeralConverter(string) {
         result += 10;
         string = string.slice(1);
       }
+    } else if (string[0] === 'L') {
+      result += 50;
+      string = string.slice(1);
+    } else if (string[0] === 'C') {
+      if (string[0 + 1] === 'D') {
+        result += 400;
+        string = string.slice(2);
+      } else if (string[0 + 1] === 'M') {
+        result += 900;
+        string = string.slice(2);
+      } else {
+        result += 100;
+        string = string.slice(1);
+      }
     }
   }
   return result;
