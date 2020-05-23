@@ -41,8 +41,13 @@ export function romanNumeralConverter(string) {
         result += 100;
         string = string.slice(1);
       }
+    } else if (string[0] === 'D') {
+      result += 500;
+      string = string.slice(1);
+    } else {
+      result += 1000;
+      string = string.slice(1);
     }
   }
   return result;
 };
-
