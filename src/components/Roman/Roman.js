@@ -3,9 +3,8 @@ import './Roman.css';
 
 function Roman(props) {
   function handleChange(event) {
-    console.log(event.target.name, event.target.value);
-    props.handleRomanChange();
-  }
+    return props.handleRomanChange(event.target.value);
+  };
 
   return (
     <div className="romanContainer">

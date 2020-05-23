@@ -15,10 +15,9 @@ class App extends React.Component {
     this.handleRomanChange = this.handleRomanChange.bind(this);
   };
 
-  handleRomanChange() {
-    console.log('ran handleromanchange');
-    romanNumeralConverter();
-  }
+  handleRomanChange(textValue) {
+    romanNumeralConverter(textValue);
+  };
 
   render() {
     return (
