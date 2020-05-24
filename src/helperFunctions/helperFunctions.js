@@ -1,4 +1,4 @@
-export function numberToRomanNumeral(number) {
+export function numberToRomanNumerals(number) {
   var result = '';
   while(number) {
     if (number >= 1 && number <= 3) {
@@ -96,6 +96,15 @@ export function romanNumeralConverter(string) {
     }
   }
   return result;
+};
+
+export function validateNumber(number) {
+  if (typeof number === 'number') {
+    if (number > 0 && number <= 3999) {
+      return true;
+    }
+  }
+  return false;
 };
 
 export function validateRomanNumerals(string) {
