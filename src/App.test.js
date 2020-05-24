@@ -9,6 +9,12 @@ test('app component renders roman numeral image', () => {
   expect(imageElement).toBeInTheDocument();
 });
 
+test('app component renders roman numeral title', () => {
+  const { getByText } = render(<App />);
+  const titleElement = getByText(/converter/i);
+  expect(titleElement).toBeInTheDocument();
+});
+
 test('app component renders learn about roman numerals link', () => {
   const { getByText } = render(<App />);
   const linkElement = getByText(/learn about roman numerals/i);
