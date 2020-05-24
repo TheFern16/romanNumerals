@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from './assets/clockface_roman01.jpg';
-import Roman from './components/Roman/Roman.js';
+import RomanToNumber from './components/Roman/RomanToNumber.js';
 import NumberToRoman from './components/Number/NumberToRoman.js';
 import { numberToNumeralConverter, romanNumeralConverter, validateNumber, validateRomanNumerals } from './helperFunctions/helperFunctions.js';
 import './App.css';
@@ -23,7 +23,7 @@ class App extends React.Component {
   conditionalRender() {
     if (this.state.conversionType === 'convertToNumbers') {
       return (
-        <Roman
+        <RomanToNumber
           romanNumeralConversionValue={this.state.romanNumeralConversionValue}
           handleRomanChange={this.handleRomanChange}
         />
@@ -40,9 +40,9 @@ class App extends React.Component {
 
   handleClick(event) {
     if (event.target.name === 'convertToNumbers') {
-      return this.setState({ conversionType: event.target.name });
+      this.setState({ conversionType: event.target.name });
     } else {
-      return this.setState({ conversionType: event.target.name });
+      this.setState({ conversionType: event.target.name });
     }
   };
 

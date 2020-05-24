@@ -1,7 +1,7 @@
 import React from 'react';
-import './Roman.css';
+import './RomanToNumber.css';
 
-function Roman(props) {
+function RomanToNumber(props) {
   function handleChange(event) {
     return props.handleRomanChange(event.target.value);
   };
@@ -20,4 +20,4 @@ function Roman(props) {
   );
 }
 
-export default Roman;
+export default RomanToNumber;

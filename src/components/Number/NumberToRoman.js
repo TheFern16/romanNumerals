@@ -15,7 +15,7 @@ function NumberToRoman(props) {
           type="text"
           name="number"/>
       </form>
-      <h4 title="conversionProp">hello world</h4>
+      <h4 title="conversionProp">{props.numberConversionValue}</h4>
     </div>
   );
 }
