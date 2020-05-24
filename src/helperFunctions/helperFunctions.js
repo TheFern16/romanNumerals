@@ -1,5 +1,22 @@
+export function numberToRomanNumeral(number) {
+  var result = '';
+  while(number) {
+    if (number >= 1 && number <= 3) {
+      result += 'I';
+      number--;
+    } else if (number === 4) {
+      result += 'IV';
+      number -= 4;
+    } else if (number >= 5 && number <= 8) {
+      result += 'V';
+      number -= 5;
+    } else if (number === 9) {
+      result += 'IX';
+      number -= 9;
+  }
+}
+
 export function romanNumeralConverter(string) {
-  console.log('test', string);
   var result = 0;
   while(string.length) {
     if (string[0] === 'I') {
