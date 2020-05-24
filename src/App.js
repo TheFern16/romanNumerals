@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './assets/clockface_roman01.jpg';
 import Roman from './components/Roman/Roman.js';
 import NumberToRoman from './components/Number/NumberToRoman.js';
-import { romanNumeralConverter, validateRomanNumerals } from './helperFunctions/helperFunctions.js';
+import { numberToNumeralConverter, romanNumeralConverter, validateNumber, validateRomanNumerals } from './helperFunctions/helperFunctions.js';
 import './App.css';
 
 class App extends React.Component {
@@ -47,7 +47,12 @@ class App extends React.Component {
   };
 
   handleNumberChange(number) {
-    console.log('number ran', number);
+    var validate = validateNumber(number * 1);
+    if (validate) {
+      this.setState({
+        numberConversionValue: numberToNumeralConverter(number * 1)
+      });
+    }
   };
 
   handleRomanChange(textValue) {
@@ -55,7 +60,7 @@ class App extends React.Component {
     if (validate) {
       this.setState({
         romanNumeralConversionValue: romanNumeralConverter(textValue)
-      })
+      });
     }
   };
 

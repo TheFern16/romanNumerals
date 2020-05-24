@@ -1,4 +1,4 @@
-export function numberToRomanNumerals(number) {
+export function numberToNumeralConverter(number) {
   var result = '';
   while(number) {
     if (number >= 1 && number <= 3) {
