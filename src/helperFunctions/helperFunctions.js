@@ -13,6 +13,19 @@ export function numberToRomanNumeral(number) {
     } else if (number === 9) {
       result += 'IX';
       number -= 9;
+    } else if (number >= 10 && number <= 39) {
+      result += 'X';
+      number -= 10;
+    } else if (number >= 40 && number <= 49) {
+      result += 'XL';
+      number -= 40;
+    } else if (number >= 50 && number <= 89) {
+      result += 'L';
+      number -= 50;
+    } else if (number >= 90 && number <= 99) {
+      result += 'XC';
+      number -= 90;
+    }
   }
 }
 
