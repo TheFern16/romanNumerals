@@ -31,9 +31,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Roman Numeral Converter
-          </p>
+          <p>Roman Numeral Converter</p>
           <a
             className="App-link"
             href="https://en.wikipedia.org/wiki/Roman_numerals"
@@ -42,6 +40,10 @@ class App extends React.Component {
           >
             Learn about Roman Numerals
           </a>
+          <div className="buttonContainer">
+            <button>Convert to Numbers</button>
+            <button>Convert to Roman Numerals</button>
+          </div>
         </header>
         <Roman
           romanNumeralConversionValue={this.state.romanNumeralConversionValue}
