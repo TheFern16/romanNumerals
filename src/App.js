@@ -9,16 +9,32 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      conversionType: 'roman',
+      conversionType: 'convertToNumbers',
       numberRomanConversionValue: '',
       romanNumeralConversionValue: 0
     };
 
+    this.handleClick = this.handleClick.bind(this);
     this.handleRomanChange = this.handleRomanChange.bind(this);
   };
 
+  conditionalRender() {
+    if (this.state.conversionType === 'convertToNumbers') {
+      return (
+        <Roman
+        romanNumeralConversionValue={this.state.romanNumeralConversionValue}
+        handleRomanChange={this.handleRomanChange}
+        />
+      )
+    }
+  }
+
   handleClick(event) {
-    console.log(event.target.name);
+    if (event.target.name === 'convertToNumbers') {
+      return this.setState({ conversionType: event.target.name });
+    } else {
+      return this.setState({ conversionType: event.target.name });
+    }
   };
 
   handleRomanChange(textValue) {
@@ -45,14 +61,11 @@ class App extends React.Component {
             Learn about Roman Numerals
           </a>
           <div className="buttonContainer">
-            <button name="converToNumbers" onClick={this.handleClick}>Convert to Numbers</button>
-            <button name="converToNumerals" onClick={this.handleClick}>Convert to Roman Numerals</button>
+            <button name="convertToNumbers" onClick={this.handleClick}>Convert to Numbers</button>
+            <button name="convertToNumerals" onClick={this.handleClick}>Convert to Roman Numerals</button>
           </div>
         </header>
-        <Roman
-          romanNumeralConversionValue={this.state.romanNumeralConversionValue}
-          handleRomanChange={this.handleRomanChange}
-        />
+        { this.conditionalRender() }
       </div>
     );
   }
