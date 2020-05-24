@@ -7,3 +7,23 @@ test('verify number component renders component title', () => {
   const titleElement = getByText(/enter numbers here:/i);
   expect(titleElement).toBeInTheDocument();
 });
+
+test('verify number component renders input box', () => {
+  const { getByPlaceholderText } = render(<NumberToRoman />);
+  const inputElement = getByPlaceholderText(/1337/i);
+  expect(inputElement).toBeInTheDocument();
+})
+
+// test('verify roman component renders conversion value prop', () => {
+//   const { getByTitle } = render(<RomanToNumber />);
+//   const propElement = getByTitle(/conversionProp/i);
+//   expect(propElement).toBeInTheDocument();
+// });
+
+// test('verify users can enter text into roman component', () => {
+//   const { getByTitle, getByPlaceholderText } = render(<RomanToNumber />);
+//   const inputElement = getByPlaceholderText(/MCCCXXXVII/i);
+//   const propElement = getByTitle(/conversionProp/i);
+//   fireEvent.keyDown(inputElement, { key: 'M', code: 'KeyM' });
+//   expect(propElement).toBeInTheDocument();
+// });
