@@ -20,10 +20,10 @@ test('verify number component renders conversion value prop', () => {
   expect(propElement).toBeInTheDocument();
 });
 
-// test('verify users can enter text into roman component', () => {
-//   const { getByTitle, getByPlaceholderText } = render(<RomanToNumber />);
-//   const inputElement = getByPlaceholderText(/MCCCXXXVII/i);
-//   const propElement = getByTitle(/conversionProp/i);
-//   fireEvent.keyDown(inputElement, { key: 'M', code: 'KeyM' });
-//   expect(propElement).toBeInTheDocument();
-// });
+test('verify users can enter text into number component', () => {
+  const { getByTitle, getByPlaceholderText } = render(<NumberToRoman />);
+  const inputElement = getByPlaceholderText(/1337/i);
+  const propElement = getByTitle(/conversionProp/i);
+  fireEvent.keyDown(inputElement, { key: '1', code: 'Digit1' });
+  expect(propElement).toBeInTheDocument();
+});
