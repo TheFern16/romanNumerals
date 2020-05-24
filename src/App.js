@@ -9,6 +9,8 @@ class App extends React.Component {
     super(props);
 
     this.state = {
+      conversionType: 'roman',
+      numberRomanConversionValue: '',
       romanNumeralConversionValue: 0
     };
 
