@@ -46,8 +46,8 @@ class App extends React.Component {
     }
   };
 
-  handleNumberchange(number) {
-    console.log('number ran');
+  handleNumberChange(number) {
+    console.log('number ran', number);
   };
 
   handleRomanChange(textValue) {

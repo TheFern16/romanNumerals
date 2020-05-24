@@ -3,8 +3,7 @@ import './NumberToRoman.css';
 
 function NumberToRoman(props) {
   function handleChange(event) {
-    // return props.handleRomanChange(event.target.value);
-    console.log(event);
+    return props.handleNumberChange(event.target.value);
   };
 
   return (
