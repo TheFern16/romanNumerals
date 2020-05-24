@@ -6,9 +6,10 @@ test('roman component renders roman component title', () => {
   const { getByText } = render(<Roman />);
   const titleElement = getByText(/enter roman numerals here:/i);
   expect(titleElement).toBeInTheDocument();
-})
-// test('app component renders roman numeral image', () => {
-//   const { getByAltText } = render(<App />);
-//   const imageElement = getByAltText(/logo/i);
-//   expect(imageElement).toBeInTheDocument();
-// });
+});
+
+test('roman component renders roman input box', () => {
+  const { getByPlaceholderText } = render(<Roman />);
+  const inputElement = getByPlaceholderText(/MCCCXXXVII/i);
+  expect(inputElement).toBeInTheDocument();
+});
