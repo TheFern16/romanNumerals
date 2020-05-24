@@ -34,8 +34,15 @@ export function numberToRomanNumeral(number) {
     } else if (number >= 500 && number <= 899) {
       result += 'D';
       number -= 500;
+    } else if (number >= 900 && number <= 999) {
+      result += 'CM';
+      number -= 900;
+    } else if (number >= 1000 && number <= 3999) {
+      result += 'M';
+      number -= 1000;
     }
   }
+  return result;
 }
 
 export function romanNumeralConverter(string) {
