@@ -25,6 +25,15 @@ export function numberToRomanNumeral(number) {
     } else if (number >= 90 && number <= 99) {
       result += 'XC';
       number -= 90;
+    } else if (number >= 100 && number <= 399) {
+      result += 'C';
+      number -= 100;
+    } else if (number >= 400 && number <= 499) {
+      result += 'CD';
+      number -= 400;
+    } else if (number >= 500 && number <= 899) {
+      result += 'D';
+      number -= 500;
     }
   }
 }
