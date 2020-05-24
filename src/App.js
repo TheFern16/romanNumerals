@@ -16,6 +16,7 @@ class App extends React.Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
+    this.handleNumberChange = this.handleNumberChange.bind(this);
     this.handleRomanChange = this.handleRomanChange.bind(this);
   };
 
@@ -23,13 +24,16 @@ class App extends React.Component {
     if (this.state.conversionType === 'convertToNumbers') {
       return (
         <Roman
-        romanNumeralConversionValue={this.state.romanNumeralConversionValue}
-        handleRomanChange={this.handleRomanChange}
+          romanNumeralConversionValue={this.state.romanNumeralConversionValue}
+          handleRomanChange={this.handleRomanChange}
         />
       )
     } else {
       return (
-        <NumberToRoman />
+        <NumberToRoman
+          numberConversionValue={this.state.numberConversionValue}
+          handleNumberChange={this.handleNumberChange}
+        />
       )
     }
   }
@@ -40,6 +44,10 @@ class App extends React.Component {
     } else {
       return this.setState({ conversionType: event.target.name });
     }
+  };
+
+  handleNumberchange(number) {
+    console.log('number ran');
   };
 
   handleRomanChange(textValue) {
