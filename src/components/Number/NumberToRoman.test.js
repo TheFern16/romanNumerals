@@ -12,13 +12,13 @@ test('verify number component renders input box', () => {
   const { getByPlaceholderText } = render(<NumberToRoman />);
   const inputElement = getByPlaceholderText(/1337/i);
   expect(inputElement).toBeInTheDocument();
-})
+});
 
-// test('verify roman component renders conversion value prop', () => {
-//   const { getByTitle } = render(<RomanToNumber />);
-//   const propElement = getByTitle(/conversionProp/i);
-//   expect(propElement).toBeInTheDocument();
-// });
+test('verify number component renders conversion value prop', () => {
+  const { getByTitle } = render(<NumberToRoman />);
+  const propElement = getByTitle(/conversionProp/i);
+  expect(propElement).toBeInTheDocument();
+});
 
 // test('verify users can enter text into roman component', () => {
 //   const { getByTitle, getByPlaceholderText } = render(<RomanToNumber />);
