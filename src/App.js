@@ -79,8 +79,8 @@ class App extends React.Component {
             Learn about Roman Numerals
           </a>
           <div className="buttonContainer">
-            <button name="convertToNumbers" onClick={this.handleClick}>Convert to Numbers</button>
-            <button name="convertToNumerals" onClick={this.handleClick}>Convert to Roman Numerals</button>
+            <button name="convertToNumbers" onClick={this.handleClick}>Numerals to Numbers</button>
+            <button name="convertToNumerals" onClick={this.handleClick}>Numbers to Numerals</button>
           </div>
         </header>
         { this.conditionalRender() }
