@@ -17,6 +17,10 @@ class App extends React.Component {
     this.handleRomanChange = this.handleRomanChange.bind(this);
   };
 
+  handleClick(event) {
+    console.log(event.target.name);
+  };
+
   handleRomanChange(textValue) {
     var validate = validateRomanNumerals(textValue);
     if (validate) {
@@ -41,8 +45,8 @@ class App extends React.Component {
             Learn about Roman Numerals
           </a>
           <div className="buttonContainer">
-            <button>Convert to Numbers</button>
-            <button>Convert to Roman Numerals</button>
+            <button name="converToNumbers" onClick={this.handleClick}>Convert to Numbers</button>
+            <button name="converToNumerals" onClick={this.handleClick}>Convert to Roman Numerals</button>
           </div>
         </header>
         <Roman
