@@ -15,8 +15,8 @@ test('verify roman component renders input box', () => {
 });
 
 test('verify roman component renders conversion value prop', () => {
-  const { getByTitle } = render(<RomanToNumber />);
-  const propElement = getByTitle(/conversionProp/i);
+  const { getByText, getByTitle } = render(<RomanToNumber romanNumeralConversionValue={1337} />);
+  const propElement = getByText(/1337/i);
   expect(propElement).toBeInTheDocument();
 });
 
